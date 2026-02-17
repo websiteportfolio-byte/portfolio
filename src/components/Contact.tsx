@@ -52,7 +52,7 @@ export default function Contact() {
                 id="email"
                 name="email"
                 className="w-full px-4 py-3 rounded-xl bg-slate-900/50 border border-glass-border text-slate-100 placeholder-slate-500 focus:border-violet-500/50 focus:ring-1 focus:ring-violet-500/30 transition-all duration-300"
-                placeholder="hello@example.com"
+                placeholder="your@email.com"
               />
             </div>
             <div>
@@ -68,7 +68,7 @@ export default function Contact() {
               />
             </div>
             <motion.a
-              href="mailto:hello@example.com?subject=Portfolio%20Inquiry&body=Hi%2C%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20project."
+              href="mailto:aphotic.firefly.art@gmail.com?subject=Portfolio%20Inquiry&body=Hi%2C%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20project."
               className="block w-full py-4 rounded-xl bg-violet-500/20 border border-violet-500/50 text-violet-300 font-medium text-center hover:bg-violet-500/30 transition-colors"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.99 }}

@@ -1,8 +1,32 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
+
+const CONTACT_EMAIL = 'aphotic.firefly.art@gmail.com';
 
 export default function Contact() {
+  const nameRef = useRef<HTMLInputElement>(null);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  const handleSendMessage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const name = nameRef.current?.value || '';
+    const email = emailRef.current?.value || '';
+    const message = messageRef.current?.value || '';
+    const subject = 'Portfolio Inquiry';
+    const body = [
+      message || 'Hi, I came across your portfolio and would love to discuss a project.',
+      '',
+      '---',
+      `Name: ${name}`,
+      `Email: ${email}`,
+    ].join('\n');
+    const mailtoUrl = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoUrl;
+  };
+
   return (
     <section id="contact" className="relative py-32 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial from-violet-500/5 via-transparent to-transparent" />
@@ -30,12 +54,13 @@ export default function Contact() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6, delay: 0.1 }}
         >
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
             <div>
               <label htmlFor="name" className="block text-sm font-medium text-slate-400 mb-2">
                 Name
               </label>
               <input
+                ref={nameRef}
                 type="text"
                 id="name"
                 name="name"
@@ -48,6 +73,7 @@ export default function Contact() {
                 Email
               </label>
               <input
+                ref={emailRef}
                 type="email"
                 id="email"
                 name="email"
@@ -60,6 +86,7 @@ export default function Contact() {
                 Message
               </label>
               <textarea
+                ref={messageRef}
                 id="message"
                 name="message"
                 rows={5}
@@ -67,14 +94,24 @@ export default function Contact() {
                 placeholder="Tell me about your project..."
               />
             </div>
-            <motion.a
-              href="mailto:aphotic.firefly.art@gmail.com?subject=Portfolio%20Inquiry&body=Hi%2C%20I%20came%20across%20your%20portfolio%20and%20would%20love%20to%20discuss%20a%20project."
-              className="block w-full py-4 rounded-xl bg-violet-500/20 border border-violet-500/50 text-violet-300 font-medium text-center hover:bg-violet-500/30 transition-colors"
+            <motion.button
+              type="button"
+              onClick={handleSendMessage}
+              className="block w-full py-4 rounded-xl bg-violet-500/20 border border-violet-500/50 text-violet-300 font-medium hover:bg-violet-500/30 transition-colors cursor-pointer"
               whileHover={{ scale: 1.01 }}
               whileTap={{ scale: 0.99 }}
             >
-              Send Message (Mailto Fallback)
-            </motion.a>
+              Send Message
+            </motion.button>
+            <p className="text-slate-500 text-sm text-center mt-4">
+              Or email directly:{' '}
+              <a
+                href={`mailto:${CONTACT_EMAIL}`}
+                className="text-violet-400 hover:text-violet-300 underline"
+              >
+                {CONTACT_EMAIL}
+              </a>
+            </p>
           </form>
         </motion.div>
       </div>

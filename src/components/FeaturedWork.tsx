@@ -5,6 +5,8 @@ import { useRef, useState } from 'react';
 import Image from 'next/image';
 import { projects } from '@/data/portfolio';
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 export default function FeaturedWork() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
@@ -63,7 +65,7 @@ export default function FeaturedWork() {
                         transition={{ duration: 0.5, ease: 'easeOut' }}
                       >
                         <Image
-                          src={project.image}
+                          src={`${basePath}${project.image}`}
                           alt={project.title}
                           fill
                           className="object-cover"

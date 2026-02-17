@@ -22,7 +22,7 @@ export default function Navbar() {
     >
       <nav className="max-w-6xl mx-auto flex justify-between items-center glass-card rounded-full px-6 py-3 border border-glass-border backdrop-blur-xl">
         <Link href="/" className="font-bold text-lg">
-          Portfolio
+          Pauline Yzabelle D. Paez
         </Link>
 
         {/* Desktop nav */}

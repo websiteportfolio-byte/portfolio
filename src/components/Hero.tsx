@@ -28,7 +28,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Digital Designer & Creative Director
+          Digital Artist & Illustrator
         </motion.p>
 
         <motion.h1
@@ -37,11 +37,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
         >
-          <span className="block">Crafting</span>
+          <span className="block">Pauline Yzabelle</span>
           <span className="block bg-gradient-to-r from-violet-400 via-fuchsia-400 to-cyan-400 bg-clip-text text-transparent">
-            Premium
+            D. Paez
           </span>
-          <span className="block">Experiences</span>
         </motion.h1>
 
         <motion.p
@@ -50,8 +49,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.7 }}
         >
-          Award-winning design that bridges strategy and aesthetics.
-          Transforming brands through thoughtful, human-centered design.
+          Digital Artist and Illustrator specializing in 2d designs. Aiming to secure a position for the continuous development of skills in a creative work environment.
         </motion.p>
 
         <motion.div

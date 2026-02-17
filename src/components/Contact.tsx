@@ -76,23 +76,6 @@ export default function Contact() {
               Send Message (Mailto Fallback)
             </motion.a>
           </form>
-
-          <div className="mt-12 pt-8 border-t border-glass-border">
-            <p className="text-slate-400 text-sm mb-4">Connect with me</p>
-            <div className="flex gap-4">
-              {['Twitter', 'LinkedIn', 'Dribbble', 'Behance'].map((social, i) => (
-                <motion.a
-                  key={social}
-                  href="#"
-                  className="text-slate-400 hover:text-violet-400 transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  {social}
-                </motion.a>
-              ))}
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

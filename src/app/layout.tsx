@@ -13,8 +13,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Digital Designer Portfolio',
-  description: 'Award-winning digital designer crafting premium experiences',
+  title: 'Pauline Yzabelle D. Paez',
+  description: 'Digital Artist and Illustrator specializing in 2d designs. Aiming to secure a position for the continuous development of skills in a creative work environment',
 };
 
 export default function RootLayout({

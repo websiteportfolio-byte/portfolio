@@ -50,7 +50,7 @@ export default function About() {
             About <span className="text-violet-400">Me</span>
           </h2>
           <p className="text-slate-400 text-lg max-w-xl mb-16">
-            Passionate about creating meaningful digital experiences that resonate.
+            Digital Artist and Illustrator specializing in 2d designs. Aiming to secure a position for the continuous development of skills in a creative work environment.
           </p>
         </ScrollReveal>
 
@@ -72,10 +72,7 @@ export default function About() {
           <div className="space-y-8">
             <ScrollReveal delay={0.3}>
               <p className="text-slate-300 text-lg leading-relaxed">
-                With over a decade of experience in digital design, I specialize in 
-                creating premium brand experiences that blend strategic thinking with 
-                exceptional aesthetics. My work spans brand identity, digital products, 
-                and motion design for clients worldwide.
+                Digital Artist and Illustrator specializing in 2d designs. Aiming to secure a position for the continuous development of skills in a creative work environment.
               </p>
               <a
                 href="https://drive.google.com/drive/folders/11jU5dHbq4LtKD1Oh6WnpOPdL5OcpubP7"
@@ -90,17 +87,16 @@ export default function About() {
               </a>
             </ScrollReveal>
 
-            {/* Animated counters */}
+            {/* Experience breakdown */}
             <ScrollReveal delay={0.4}>
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <motion.div
                   className="glass-card rounded-xl p-6 text-center"
                   whileHover={{ scale: 1.02, y: -4 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <div className="text-4xl font-bold text-violet-400 mb-1">
-                    <AnimatedCounter value={12} />
-                    <span className="text-2xl">+</span>
+                    <AnimatedCounter value={6} />
                   </div>
                   <div className="text-slate-400 text-sm">Years Experience</div>
                 </motion.div>
@@ -110,10 +106,9 @@ export default function About() {
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <div className="text-4xl font-bold text-violet-400 mb-1">
-                    <AnimatedCounter value={150} />
-                    <span className="text-2xl">+</span>
+                    <AnimatedCounter value={1} />
                   </div>
-                  <div className="text-slate-400 text-sm">Projects Delivered</div>
+                  <div className="text-slate-400 text-sm">Year in Film</div>
                 </motion.div>
                 <motion.div
                   className="glass-card rounded-xl p-6 text-center"
@@ -121,10 +116,19 @@ export default function About() {
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   <div className="text-4xl font-bold text-violet-400 mb-1">
-                    <AnimatedCounter value={80} />
-                    <span className="text-2xl">+</span>
+                    <AnimatedCounter value={2} />
                   </div>
-                  <div className="text-slate-400 text-sm">Happy Clients</div>
+                  <div className="text-slate-400 text-sm">Years in Agency</div>
+                </motion.div>
+                <motion.div
+                  className="glass-card rounded-xl p-6 text-center"
+                  whileHover={{ scale: 1.02, y: -4 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                >
+                  <div className="text-4xl font-bold text-violet-400 mb-1">
+                    <AnimatedCounter value={3} />
+                  </div>
+                  <div className="text-slate-400 text-sm">Years Freelance</div>
                 </motion.div>
               </div>
             </ScrollReveal>

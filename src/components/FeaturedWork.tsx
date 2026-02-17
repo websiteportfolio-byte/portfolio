@@ -119,6 +119,28 @@ export default function FeaturedWork() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className="mt-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          <a
+            href="https://drive.google.com/drive/folders/11jU5dHbq4LtKD1Oh6WnpOPdL5OcpubP7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full glass-card border border-glass-border text-slate-200 font-medium hover:bg-glass-strong hover:border-violet-500/30 transition-all group"
+          >
+            View Previous Work on Google Drive
+            <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+          <p className="text-slate-500 text-sm mt-4">
+            Graphic Design · Illustrated Artworks · Video Edits
+          </p>
+        </motion.div>
       </div>
     </section>
   );

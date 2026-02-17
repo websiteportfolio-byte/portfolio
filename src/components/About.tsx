@@ -2,6 +2,7 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
+import Image from 'next/image';
 import ScrollReveal from './ScrollReveal';
 
 function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: string }) {
@@ -56,11 +57,15 @@ export default function About() {
           <ScrollReveal direction="left" delay={0.2}>
             <div className="glass-card rounded-2xl p-8 md:p-12 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-              <div className="relative">
-                {/* Profile image placeholder */}
-                <div className="aspect-square max-w-sm mx-auto rounded-2xl bg-gradient-to-br from-violet-500/20 to-fuchsia-500/20 border border-glass-border flex items-center justify-center">
-                  <span className="text-6xl text-violet-500/50">JD</span>
-                </div>
+              <div className="relative aspect-square max-w-sm mx-auto rounded-2xl overflow-hidden border border-glass-border">
+                <Image
+                  src="/profile.png"
+                  alt="Profile photo"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 384px"
+                  priority
+                />
               </div>
             </div>
           </ScrollReveal>
@@ -73,6 +78,17 @@ export default function About() {
                 exceptional aesthetics. My work spans brand identity, digital products, 
                 and motion design for clients worldwide.
               </p>
+              <a
+                href="https://drive.google.com/drive/folders/11jU5dHbq4LtKD1Oh6WnpOPdL5OcpubP7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-6 text-violet-400 hover:text-violet-300 font-medium transition-colors"
+              >
+                View previous work on Google Drive
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
             </ScrollReveal>
 
             {/* Animated counters */}

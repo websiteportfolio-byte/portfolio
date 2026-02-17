@@ -2,8 +2,9 @@
 
 import { motion, useInView } from 'framer-motion';
 import { useRef, useEffect, useState } from 'react';
-import Image from 'next/image';
 import ScrollReveal from './ScrollReveal';
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
 
 function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: string }) {
   const ref = useRef(null);
@@ -58,13 +59,11 @@ export default function About() {
             <div className="glass-card rounded-2xl p-8 md:p-12 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
               <div className="relative aspect-square max-w-sm mx-auto rounded-2xl overflow-hidden border border-glass-border">
-                <Image
-                  src="/profile.png"
+                <img
+                  src={`${basePath}/profile.png`}
                   alt="Profile photo"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 384px"
-                  priority
+                  className="w-full h-full object-cover"
+                  loading="eager"
                 />
               </div>
             </div>

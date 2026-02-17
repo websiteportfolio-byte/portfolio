@@ -1,12 +1,16 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.BASE_PATH || '';
 const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true,
   },
   trailingSlash: true,
-  basePath: process.env.BASE_PATH || '',
-  assetPrefix: process.env.BASE_PATH ? `${process.env.BASE_PATH}/` : undefined,
+  basePath,
+  assetPrefix: basePath ? `${basePath}/` : undefined,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 };
 
 module.exports = nextConfig;

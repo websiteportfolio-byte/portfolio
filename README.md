@@ -76,7 +76,7 @@ A workflow is included at `.github/workflows/deploy.yml`. To use it:
 
 | Location | File | What to Update |
 |----------|------|----------------|
-| **Projects** | `src/data/portfolio.ts` | Add/edit projects, case study content, gallery images |
+| **Projects** | `src/data/portfolio.ts` | Add/edit projects, descriptions, tags, images |
 | **Skills** | `src/data/portfolio.ts` | Update `skills` array with your expertise |
 | **About** | `src/components/About.tsx` | Bio text, counters (years, projects, clients), profile image |
 | **Hero** | `src/components/Hero.tsx` | Headline, tagline, CTA text |
@@ -91,7 +91,11 @@ A workflow is included at `.github/workflows/deploy.yml`. To use it:
 
 ### Replacing Placeholder Images
 
-Replace Unsplash URLs in `src/data/portfolio.ts` with your own images. Place images in `public/` and reference as `/your-image.jpg`.
+Replace Unsplash URLs in `src/data/portfolio.ts` with your own images:
+
+1. Download images from your Google Drive and add to `public/` (e.g. `public/graphic-design.jpg`)
+2. Update `src/data/portfolio.ts` and change the `image` field: `image: '/graphic-design.jpg'`
+3. The profile photo is at `public/profile.png`
 
 ## Project Structure
 
